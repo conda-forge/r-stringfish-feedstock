@@ -1,4 +1,4 @@
-{% set version = '0.12.1' %}
+{% set version = "0.13.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stringfish_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stringfish/stringfish_{{ version }}.tar.gz
-  sha256: 39e8b57211ba816f1453d438af797dda0ffc2ed8c087569e9b51e052d3d704e0
+  sha256: c22b2147e21b38fa9fcf73c21d040c69fe59e23701eddf8f58962aa9c0e7e11b
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,11 +51,10 @@ test:
 about:
   home: https://github.com/traversc/stringfish
   license: GPL-3.0-only
-  summary: Provides an extendable and performant 'alt-string' implementation backed by 'C++'
-    vectors and strings.
+  summary: Provides an extendable and performant 'alt-string' implementation backed by 'C++' vectors and strings.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
