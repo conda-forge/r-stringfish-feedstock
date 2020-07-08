@@ -5,7 +5,7 @@ Home: https://github.com/traversc/stringfish
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Provides an extendable and performant 'alt-string' implementation backed by 'C++' vectors and strings.
 
