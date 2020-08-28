@@ -1,4 +1,4 @@
-{% set version = "0.13.3" %}
+{% set version = "0.14.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stringfish_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stringfish/stringfish_{{ version }}.tar.gz
-  sha256: 152d206c19de086bad560698557a984283d7b962fbf44598e88e64ae7b690ca7
+  sha256: ec69704c6984e67f7f24e38a8aad5f4283bb85aacd3325bc57300ee95fe105b9
 
 build:
   merge_build_host: true  # [win]
@@ -38,10 +38,12 @@ requirements:
   host:
     - r-base
     - r-rcpp
+    - r-rcppparallel
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp
+    - r-rcppparallel
 
 test:
   commands:
