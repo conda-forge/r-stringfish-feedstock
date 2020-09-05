@@ -1,4 +1,4 @@
-{% set version = "0.14.1" %}
+{% set version = "0.14.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stringfish_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stringfish/stringfish_{{ version }}.tar.gz
-  sha256: ec69704c6984e67f7f24e38a8aad5f4283bb85aacd3325bc57300ee95fe105b9
+  sha256: 9373cfc715cda1527fd20179435977b8e59e19d8c5ef82a31e519f93fb624ced
 
 build:
   merge_build_host: true  # [win]
