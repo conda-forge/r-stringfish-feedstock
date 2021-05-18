@@ -15,7 +15,7 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: true  # [osx and r_lang == "3.6"]
+  skip: true  # [osx and r_base == "3.6"]
   rpaths:
     - lib/R/lib/
     - lib/
