@@ -28,7 +28,7 @@ r_base:
 - '4.4'
 target_platform:
 - linux-64
-tbb:
+tbb_devel:
 - '2021'
 zip_keys:
 - - c_compiler_version
