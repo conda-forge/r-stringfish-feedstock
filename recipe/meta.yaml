@@ -42,6 +42,8 @@ requirements:
     - r-base
     - r-rcpp
     - r-rcppparallel
+    - pcre2                        # [not win]
+    - tbb                          # [not win]
   run:
     - r-base
     - r-rcpp
