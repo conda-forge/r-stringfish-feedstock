@@ -12,10 +12,16 @@ source:
   sha256: 9e0af5404b07c2db5912f8663dbb6f09c813b5598d7ec90fd5501f1c4453d674
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'             # [win]
+    - '*/Rblas.dll'         # [win]
+    - '*/Rlapack.dll'       # [win]
+    - '*/RcppParallel.dll'  # [win]
+    - '*/tbb.dll'           # [win]
 
 requirements:
   build:
@@ -42,6 +48,8 @@ requirements:
     - r-base
     - r-rcpp
     - r-rcppparallel
+    - pcre2                        # [not win]
+    - tbb-devel                    # [not win]
   run:
     - r-base
     - r-rcpp
