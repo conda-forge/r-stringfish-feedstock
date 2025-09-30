@@ -49,7 +49,7 @@ requirements:
     - r-rcpp
     - r-rcppparallel
     - pcre2                        # [not win]
-    - tbb                          # [not win]
+    - tbb-devel                    # [not win]
   run:
     - r-base
     - r-rcpp
